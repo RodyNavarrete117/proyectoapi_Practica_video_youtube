@@ -35,7 +35,6 @@ class ContactosController extends Controller
         if (!$request->get('nombre') || !$request->get('correo')) {
             return response()->json(['error' => 'Nombre y correo son obligatorios'], 400);
         }
-
         $contacto = new Contactos;
         $contacto->nombre = $request->get('nombre');
         $contacto->primerapellido = $request->get('primerapellido');
